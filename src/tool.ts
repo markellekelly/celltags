@@ -2,7 +2,7 @@ import { PanelLayout } from "@phosphor/widgets";
 
 import { NotebookTools, INotebookTracker } from "@jupyterlab/notebook";
 
-import { JupyterLab } from "@jupyterlab/application";
+import { JupyterFrontEnd } from "@jupyterlab/application";
 
 import { TagWidget } from "./widget";
 
@@ -15,8 +15,9 @@ export class TagTool extends NotebookTools.Tool {
    *
    * @param tracker - The notebook tracker.
    */
-  constructor(tracker: INotebookTracker, app: JupyterLab) {
+  constructor(tracker: INotebookTracker, app: JupyterFrontEnd) {
     super();
+    app;
     this.tracker = tracker;
     let layout = (this.layout = new PanelLayout());
     this.widget = new TagWidget();
