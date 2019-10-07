@@ -9,6 +9,32 @@ export class TagWidget extends Widget {
    */
   constructor() {
     super();
-    this.addClass("test-class");
+    this.addClass("unapplied-tag");
+    this.node.innerText = "testtag";
+    let img = document.createElement('span');
+    img.className = "tag-icon";
+    this.node.appendChild(img);
+  }
+
+  onAfterAttach() {
+    this.node.addEventListener('mousedown', this);
+  }
+
+  onBeforeDetach() {
+    this.node.removeEventListener('mousedown', this);
+  }
+
+  handleEvent(event: Event): void {
+    switch (event.type) {
+      case 'mousedown':
+        this._evtClick(event as MouseEvent);
+        break;
+      default:
+        break;
+    }
+  }
+
+  private _evtClick(event: MouseEvent) {
+    console.log(event.target);
   }
 }

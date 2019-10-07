@@ -12,7 +12,7 @@ function activate(
   tools: INotebookTools,
   tracker: INotebookTracker
 ) {
-  console.log("activated!!!!");
+  console.log("activated!");
   app;
   const tool = new TagTool(tracker, app);
   tools.addItem({ tool: tool, rank: 1.7 });

@@ -1,6 +1,20 @@
-.test-class {
-  min-height:24px;
-  width:100px;
-  background-color: blue;
-  border-radius: 5px;
+.unapplied-tag {
+  min-height:32px;
+  width:fit-content;
+  background-color: var(--jp-layout-color1);
+  border: 1px solid var(--jp-ui-font-color2);
+  border-radius: 35px;
+  margin:10px;
+  padding:12px;
+  font-size: var(--jp-ui-font-size-1);
+  color: var(--jp-ui-font-color2);
+  vertical-align: middle;
+}
+
+.tag-icon {
+  display: inline-block;
+  height: 18px;
+  min-width:18px;
+  background-image: url('../static/check-24px.svg');
+  padding-right:8px;
 }
