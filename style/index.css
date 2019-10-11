@@ -1,20 +1,39 @@
-.unapplied-tag {
-  min-height:32px;
+.tag {
+  height:32px;
   width:fit-content;
-  background-color: var(--jp-layout-color1);
-  border: 1px solid var(--jp-ui-font-color2);
   border-radius: 35px;
-  margin:10px;
+  margin-left:10px;
+  margin-bottom:10px;
   padding:12px;
   font-size: var(--jp-ui-font-size-1);
-  color: var(--jp-ui-font-color2);
-  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tag-icon {
+.unapplied-tag {
+  background-color: var(--jp-layout-color1);
+  border: 1px solid var(--jp-ui-font-color2);
+  color: var(--jp-ui-font-color2);
+}
+
+.applied-tag {
+  background-color: var(--jp-layout-color2);
+  border: 1px solid var(--jp-ui-font-color1);
+  color: var(--jp-ui-font-color1);
+}
+
+.tag-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-icon {
   display: inline-block;
   height: 18px;
   min-width:18px;
   background-image: url('../static/check-24px.svg');
-  padding-right:8px;
+  background-size: 18px;
+  margin-left:8px;
 }

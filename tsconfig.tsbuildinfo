@@ -866,12 +866,12 @@
         "signature": "c03247b9d5b88491ca41870ea156bc8e53b5f8ab2d4b97ec8080cd070ff93f87"
       },
       "/users/markelle/projects/celltags/celltags/src/widget.ts": {
-        "version": "17a14e3e80c1db4bf4e8b82bbb78cd0dc6df1160c84a22c691c111af609a0514",
-        "signature": "c3a38fb46b41fa948c1c5372e20c6a1262dccccbbb60bb3c95ddea514fd874f9"
+        "version": "f5b66d9ae397c1f9ce1f99c018875d0953e2b16d5505d809f0c3e9babe5b86d1",
+        "signature": "d8ce1b167e91d9e90da89411159556251bdeb2ab3edd63b6cec1ee2abcd8e012"
       },
       "/users/markelle/projects/celltags/celltags/src/tool.ts": {
-        "version": "5a73812b6f2bf036a7172c9dd09de0f0a93d626f0d83d01ccaa41574ea318b0a",
-        "signature": "0da9d29694279081e753dd5fa189727c93e25bc7e94cb68ae493e3f36aea4ee7"
+        "version": "9d863118b972eeeea9c8321c6bc18b085a608027c63daf487671490fea94e6fd",
+        "signature": "812812e982a3e23cb3bb878215d3bc112c9a1614dde3eef1b966a6ababf161f0"
       },
       "/users/markelle/projects/celltags/celltags/src/index.ts": {
         "version": "f3d26ca2978bb6004199c2662492d7e656c5bc337f8c941f2ec52a36a4e397d6",
@@ -2633,12 +2633,14 @@
       ],
       "/users/markelle/projects/celltags/celltags/src/widget.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
+        "/users/markelle/projects/celltags/celltags/src/tool.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/markelle/projects/celltags/celltags/src/tool.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/cells/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/src/widget.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
@@ -3093,6 +3095,10 @@
       "/users/markelle/projects/celltags/celltags/src/tool.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts"
+      ],
+      "/users/markelle/projects/celltags/celltags/src/widget.ts": [
+        "/users/markelle/projects/celltags/celltags/src/tool.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts"
       ],
       "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/truststatus.d.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/apputils/lib/index.d.ts",
@@ -3682,9 +3688,6 @@
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/widget.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/markelle/projects/celltags/celltags/src/widget.ts": [
-        "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts"
       ],
       "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/cells/lib/headerfooter.d.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
