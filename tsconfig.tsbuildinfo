@@ -866,16 +866,20 @@
         "signature": "c03247b9d5b88491ca41870ea156bc8e53b5f8ab2d4b97ec8080cd070ff93f87"
       },
       "/users/markelle/projects/celltags/celltags/src/widget.ts": {
-        "version": "f5b66d9ae397c1f9ce1f99c018875d0953e2b16d5505d809f0c3e9babe5b86d1",
-        "signature": "d8ce1b167e91d9e90da89411159556251bdeb2ab3edd63b6cec1ee2abcd8e012"
+        "version": "cd17ef2244e60653c83493eb40cff6ea512715a343d684beaeee48f3f2089724",
+        "signature": "088e35302448516ed5dbd5f8cb736b6a59da7f8a58b76e6e114a9ea2c37ab0fb"
       },
       "/users/markelle/projects/celltags/celltags/src/tool.ts": {
-        "version": "9d863118b972eeeea9c8321c6bc18b085a608027c63daf487671490fea94e6fd",
-        "signature": "812812e982a3e23cb3bb878215d3bc112c9a1614dde3eef1b966a6ababf161f0"
+        "version": "d4fee8a439cca42a758ad78dc86d403085b9df799a2903e3d10174d3aa3ba1b2",
+        "signature": "15e6f163b8ece56f9b67106b0d2d5199b0cd6d5c8496abe03ced076e2441a259"
       },
       "/users/markelle/projects/celltags/celltags/src/index.ts": {
-        "version": "f3d26ca2978bb6004199c2662492d7e656c5bc337f8c941f2ec52a36a4e397d6",
+        "version": "804dc573913476f930167264107a8ab0b305b07997d7b741842804a0c71e9a91",
         "signature": "d0abc4b979c39daf7a437f6916f14d9dc8fb09a8c79727103da72c931df0f474"
+      },
+      "/users/markelle/projects/celltags/celltags/src/widget2.ts": {
+        "version": "8c02ca1a987550d8e2f69720d01f08476896e84b5d9305a507b0e9c52f58f9b0",
+        "signature": "8673047d7149e8c1c345fa2d9211c42c95d8573472665992c69eb341fcd54f9a"
       },
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/globals.d.ts": {
         "version": "4d0e3b8334392a2e0adef9caf867118678fb8f38da90d8003184debd62d30f3b",
@@ -2640,7 +2644,6 @@
       "/users/markelle/projects/celltags/celltags/src/tool.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
-        "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/cells/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/src/widget.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
@@ -2649,6 +2652,12 @@
       "/users/markelle/projects/celltags/celltags/src/index.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
+        "/users/markelle/projects/celltags/celltags/src/tool.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/markelle/projects/celltags/celltags/src/widget2.ts": [
+        "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/src/tool.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
@@ -3095,6 +3104,10 @@
       "/users/markelle/projects/celltags/celltags/src/tool.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts"
+      ],
+      "/users/markelle/projects/celltags/celltags/src/widget2.ts": [
+        "/users/markelle/projects/celltags/celltags/src/tool.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts"
       ],
       "/users/markelle/projects/celltags/celltags/src/widget.ts": [
         "/users/markelle/projects/celltags/celltags/src/tool.ts",
@@ -4973,6 +4986,7 @@
       "/users/markelle/projects/celltags/celltags/src/widget.ts",
       "/users/markelle/projects/celltags/celltags/src/tool.ts",
       "/users/markelle/projects/celltags/celltags/src/index.ts",
+      "/users/markelle/projects/celltags/celltags/src/widget2.ts",
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/globals.d.ts",
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/assert.d.ts",
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/async_hooks.d.ts",

@@ -38,7 +38,6 @@ export class TagWidget extends Widget {
   onAfterAttach() {
     this.node.addEventListener('mousedown', this);
     this.node.addEventListener('mouseover', this);
-    this.update();
   }
 
   onBeforeDetach() {
@@ -59,39 +58,31 @@ export class TagWidget extends Widget {
   }
 
   onUpdateRequest() {
-    let applied = this.parent.checkApplied(name);
+    let applied = this.parent.checkApplied(this.name);
     if (applied != this.applied) {
       this.toggleApplied();
     }
-    //this.buildTag();
-  }
-
-  addToActiveCell() {
-    this.parent.write_tag(this.name, true);
-  }
-
-  removeFromActiveCell() {
-    this.parent.write_tag(this.name, false);
   }
 
   toggleApplied() {
     if (this.applied) {
-      this.removeFromActiveCell();
       this.removeClass("applied-tag");
       (this.node.firstChild.lastChild as HTMLSpanElement).style.display = "none";
       this.addClass("unapplied-tag");
     } else {
-      this.addToActiveCell();
       this.removeClass("unapplied-tag");
       (this.node.firstChild.lastChild as HTMLSpanElement).style.display = "inline-block";
       this.addClass("applied-tag");
     }
-    console.log(this.node.firstChild.lastChild);
     this.applied = !this.applied;
   }
 
-
   private _evtClick() {
+    if (this.applied) {
+      this.parent.removeTag(this.name);
+    } else {
+      this.parent.addTag(this.name);
+    }
     this.toggleApplied();
   }
 
@@ -99,7 +90,7 @@ export class TagWidget extends Widget {
     event;
   }
 
-  private name: string;
+  public name: string;
   private applied: boolean;
   public parent: TagTool;
 }
