@@ -20,6 +20,7 @@ export class TagWidget extends Widget {
   buildTag() {
     let text = document.createElement('span');
     text.textContent = this.name;
+    text.style.textOverflow = "ellipsis";
     let tag = document.createElement('div');
     tag.className = "tag-holder";
     tag.appendChild(text);

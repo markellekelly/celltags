@@ -9,6 +9,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  max-width: calc(100% - 25px);
 }
 
 .unapplied-tag {
@@ -23,6 +24,11 @@
   color: var(--jp-ui-font-color1);
 }
 
+.add-tag {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .tag-holder {
   display: flex;
   justify-content: center;
@@ -34,6 +40,15 @@
   height: 18px;
   min-width:18px;
   background-image: url('../static/check-24px.svg');
+  background-size: 18px;
+  margin-left:8px;
+}
+
+.add-icon {
+  display: inline-block;
+  height: 18px;
+  min-width:18px;
+  background-image: url('../static/add-24px.svg');
   background-size: 18px;
   margin-left:8px;
 }

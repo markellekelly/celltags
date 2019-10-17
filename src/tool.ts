@@ -8,6 +8,8 @@ import { JupyterFrontEnd } from "@jupyterlab/application";
 
 import { TagWidget } from "./widget";
 
+import { AddWidget } from './addwidget';
+
 /**
  * A Tool for tag operations.
  */
@@ -22,6 +24,14 @@ export class TagTool extends NotebookTools.Tool {
     app;
     this.tracker = tracker;
     this.layout = new PanelLayout();
+    this.createTagInput();
+  }
+
+  createTagInput() {
+    let layout = this.layout as PanelLayout;
+    let input = new AddWidget();
+    layout.insertWidget(-1, input);
+    //layout.addWidget(input);
   }
 
   checkApplied(name:string):boolean {
@@ -57,7 +67,7 @@ export class TagTool extends NotebookTools.Tool {
       }
     }
     cell.model.metadata.set('tags', tagList);
-    this.parent.update();
+    console.log(this.tracker.activeCell.model.metadata.get('tags'));
   }
 
   removeTag(name:string) {
@@ -73,7 +83,7 @@ export class TagTool extends NotebookTools.Tool {
     }
     this.refreshTags();
     this.loadActiveTags();
-    this.parent.update();
+    console.log(this.tracker.activeCell.model.metadata.get('tags'));
   }
 
   loadActiveTags() {
@@ -115,11 +125,11 @@ export class TagTool extends NotebookTools.Tool {
     this.pullTags();
     let layout = this.layout as PanelLayout;
     let tags: string[] = this.tagList;
-    let nWidgets = layout.widgets.length-1
+    let nWidgets = layout.widgets.length-2
     for (let i=nWidgets; i>=0; i--) {
       let idx = tags.indexOf((layout.widgets[i] as TagWidget).name)
       if (idx < 0) {
-        layout.widgets[i].dispose();
+        //layout.widgets[i].dispose();
       } else {
         tags.splice(idx,1);
       }
