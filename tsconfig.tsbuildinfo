@@ -874,16 +874,12 @@
         "signature": "da2d8eb2cc1152fa832ede00923ecc21624d46e226945b90eb31734dda55e681"
       },
       "/users/markelle/projects/celltags/celltags/src/addwidget.ts": {
-        "version": "b018a0942e938af6bd57e0e035e6c72bd64b3e2661d252ff30ff0a43234363b8",
-        "signature": "98901fe6f7933fa27b610f9b19c8fbec83ad5c932f91c9be7ab1e08215545a0a"
+        "version": "74ff8b9375e3fb5c2fb014d37f891e8a82c4f5b546a27f54de9b209647e1eaaa",
+        "signature": "70da3618fe5a98756d5db66de10012a5dc81d114e53955496c6a381714bb3733"
       },
       "/users/markelle/projects/celltags/celltags/src/index.ts": {
         "version": "804dc573913476f930167264107a8ab0b305b07997d7b741842804a0c71e9a91",
         "signature": "d0abc4b979c39daf7a437f6916f14d9dc8fb09a8c79727103da72c931df0f474"
-      },
-      "/users/markelle/projects/celltags/celltags/src/widget2.ts": {
-        "version": "8c02ca1a987550d8e2f69720d01f08476896e84b5d9305a507b0e9c52f58f9b0",
-        "signature": "8673047d7149e8c1c345fa2d9211c42c95d8573472665992c69eb341fcd54f9a"
       },
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/globals.d.ts": {
         "version": "4d0e3b8334392a2e0adef9caf867118678fb8f38da90d8003184debd62d30f3b",
@@ -2667,12 +2663,6 @@
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/markelle/projects/celltags/celltags/src/widget2.ts": [
-        "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
-        "/users/markelle/projects/celltags/celltags/src/tool.ts",
-        "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
-        "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/globals.d.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
@@ -3097,10 +3087,6 @@
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/widget.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/util.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/markelle/projects/celltags/celltags/src/widget2.ts": [
-        "/users/markelle/projects/celltags/celltags/src/tool.ts",
-        "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts"
       ],
       "/users/markelle/projects/celltags/celltags/src/addwidget.ts": [
         "/users/markelle/projects/celltags/celltags/src/tool.ts",
@@ -5002,7 +4988,6 @@
       "/users/markelle/projects/celltags/celltags/src/tool.ts",
       "/users/markelle/projects/celltags/celltags/src/addwidget.ts",
       "/users/markelle/projects/celltags/celltags/src/index.ts",
-      "/users/markelle/projects/celltags/celltags/src/widget2.ts",
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/globals.d.ts",
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/assert.d.ts",
       "/users/markelle/projects/celltags/celltags/node_modules/@types/node/async_hooks.d.ts",

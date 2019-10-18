@@ -27,6 +27,11 @@
 .add-tag {
   white-space: nowrap;
   overflow: hidden;
+  border: none;
+  outline: none;
+  resize: horizontal;
+  font-size: var(--jp-ui-font-size-1);
+  color: var(--jp-ui-font-color2);
 }
 
 .tag-holder {
