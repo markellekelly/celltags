@@ -866,16 +866,16 @@
         "signature": "7a7e8dec050f4ad9d6b093812a3a203acb13a32364079db20f7a6fde38f8427c"
       },
       "/users/markelle/projects/celltags/celltags/src/widget.ts": {
-        "version": "b3914b71c7e02d61cf421afaa41f18ecd019fdd88e55612377866322ac397cce",
-        "signature": "088e35302448516ed5dbd5f8cb736b6a59da7f8a58b76e6e114a9ea2c37ab0fb"
+        "version": "f08b2cbb8288e99f7219d1ebde99195c48d2efe371f7d4c5df3f9752125e3300",
+        "signature": "d2514690f5d1df159deb9af3e9703bfc4140eff7ff0cb4d715fb4cd98c9e92f8"
       },
       "/users/markelle/projects/celltags/celltags/src/tool.ts": {
-        "version": "5728c80425ad83971ad772684fbc7b6707f35b4cf531ccd50b7ee1f8bc99c72f",
+        "version": "bed82ac4f2880dd0afed315210b24777a41de325fb8071be8f677c3c977c2627",
         "signature": "da2d8eb2cc1152fa832ede00923ecc21624d46e226945b90eb31734dda55e681"
       },
       "/users/markelle/projects/celltags/celltags/src/addwidget.ts": {
-        "version": "383d71935c03a3d213700a05828708d7283dee9807246541e7a277d009bea672",
-        "signature": "70da3618fe5a98756d5db66de10012a5dc81d114e53955496c6a381714bb3733"
+        "version": "58187604ab11c3584a90f3ee1d0c997c221de7d81c7f8817163b975f6417fdab",
+        "signature": "450d9b8629985367be03e8566fe1886d11a973e9d92873898d9396610b8c2054"
       },
       "/users/markelle/projects/celltags/celltags/src/index.ts": {
         "version": "804dc573913476f930167264107a8ab0b305b07997d7b741842804a0c71e9a91",

@@ -39,6 +39,7 @@ export class AddWidget extends Widget {
   onAfterAttach() {
     this.node.addEventListener('mousedown', this);
     this.node.addEventListener('mouseover', this);
+    this.node.addEventListener('mouseout', this);
     this.node.addEventListener('keypress', this);
     this.node.addEventListener('focusout', this);
   }
@@ -46,6 +47,7 @@ export class AddWidget extends Widget {
   onBeforeDetach() {
     this.node.removeEventListener('mousedown', this);
     this.node.removeEventListener('mouseover', this);
+    this.node.addEventListener('mouseout', this);
     this.node.removeEventListener('keypress', this);
     this.node.removeEventListener('focusout', this);
   }
@@ -58,11 +60,14 @@ export class AddWidget extends Widget {
       case 'mouseover':
         this._evtHover(event as MouseEvent);
         break;
+      case 'mouseout':
+        this._evtOffHover(event as MouseEvent);
+        break;
       case 'keypress':
         this._evtKeyPress(event as KeyboardEvent);
         break;
       case 'focusout':
-        this._evtBlur(event as FocusEvent);
+        this._evtBlur();
         break;
       default:
         break;
@@ -79,7 +84,11 @@ export class AddWidget extends Widget {
   }
 
   private _evtHover(event: MouseEvent) {
-    event;
+    //(this.node as HTMLElement).classList.add("tag-hover");
+  }
+
+  private _evtOffHover(event: MouseEvent) {
+    //(this.node as HTMLElement).classList.remove("tag-hover");
   }
 
   private _evtKeyPress(event: KeyboardEvent) {
@@ -94,11 +103,12 @@ export class AddWidget extends Widget {
     // if they hit Enter, add the tag and reset state
     if (event.keyCode == 13) {
       let value = inputElement.value;
-      console.log("Added " + value);
+      (this.parent as TagTool).addTag(value);
+      this._evtBlur();
     }
   }
 
-  private _evtBlur(event: FocusEvent) {
+  private _evtBlur() {
     if (this.editing) {
       this.editing = false;
       let target = event.target as HTMLInputElement;

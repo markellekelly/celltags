@@ -39,11 +39,13 @@ export class TagWidget extends Widget {
   onAfterAttach() {
     this.node.addEventListener('mousedown', this);
     this.node.addEventListener('mouseover', this);
+    this.node.addEventListener('mouseout', this);
   }
 
   onBeforeDetach() {
     this.node.removeEventListener('mousedown', this);
-    this.node.addEventListener('mouseover', this);
+    this.node.removeEventListener('mouseover', this);
+    this.node.removeEventListener('mouseout', this);
   }
 
   handleEvent(event: Event): void {
@@ -53,6 +55,10 @@ export class TagWidget extends Widget {
         break;
       case 'mouseover':
         this._evtHover(event as MouseEvent);
+        break;
+      case 'mouseout':
+        this._evtOffHover(event as MouseEvent);
+        break;
       default:
         break;
     }
@@ -88,7 +94,11 @@ export class TagWidget extends Widget {
   }
 
   private _evtHover(event: MouseEvent) {
-    event;
+    (this.node as HTMLElement).classList.add("tag-hover");
+  }
+
+  private _evtOffHover(event: MouseEvent) {
+    (this.node as HTMLElement).classList.remove("tag-hover");
   }
 
   public name: string;
