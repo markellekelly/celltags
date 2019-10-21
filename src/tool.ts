@@ -30,8 +30,8 @@ export class TagTool extends NotebookTools.Tool {
   createTagInput() {
     let layout = this.layout as PanelLayout;
     let input = new AddWidget();
-    layout.insertWidget(-1, input);
-    //layout.addWidget(input);
+    input.id = "add-tag";
+    layout.insertWidget(0, input);
   }
 
   checkApplied(name:string):boolean {
@@ -50,10 +50,10 @@ export class TagTool extends NotebookTools.Tool {
 
   addTag(name:string) {
     let cell = this.tracker.activeCell;
-    let tagList = cell.model.metadata.get('tags') as string[];
+    let tags = cell.model.metadata.get('tags') as string[];
     let newTags = name.split(/[,\s]+/);
-    if (tagList === undefined) {
-      tagList = [];
+    if (tags === undefined) {
+      tags = [];
     } 
     const toAdd: string[] = [];
     for (let i = 0; i < newTags.length; i++) {
@@ -62,23 +62,23 @@ export class TagTool extends NotebookTools.Tool {
       }
     }
     for (let j = 0; j < toAdd.length; j++) {
-      if (tagList.indexOf(toAdd[j]) < 0) {
-        tagList.push(toAdd[j]);
+      if (tags.indexOf(toAdd[j]) < 0) {
+        tags.push(toAdd[j]);
       }
     }
-    cell.model.metadata.set('tags', tagList);
+    cell.model.metadata.set('tags', tags);
     console.log(this.tracker.activeCell.model.metadata.get('tags'));
   }
 
   removeTag(name:string) {
     let cell = this.tracker.activeCell;
-    let tagList = cell.model.metadata.get('tags') as string[];
-    let idx = tagList.indexOf(name);
+    let tags = cell.model.metadata.get('tags') as string[];
+    let idx = tags.indexOf(name);
     if (idx > -1){
-      tagList.splice(idx,1);
+      tags.splice(idx,1);
     }
-    cell.model.metadata.set('tags', tagList);
-    if (tagList.length === 0) {
+    cell.model.metadata.set('tags', tags);
+    if (tags.length === 0) {
       cell.model.metadata.delete('tags');
     }
     this.refreshTags();
@@ -100,43 +100,74 @@ export class TagTool extends NotebookTools.Tool {
     let notebook = this.tracker.currentWidget;
     if (this.tracker && this.tracker.currentWidget) {
       let cells = notebook.model.cells;
-      let allTags = null;
+      let allTags:string[] = [];
       for (var i = 0; i < cells.length; i++) {
+        // console.log("CELL: " );
+        // console.log(cells.get(i).value);
         let metadata = cells.get(i).metadata;
         let tags = metadata.get('tags') as string[];
+        // console.log("TAGS: ");
+        // console.log(tags);
         if (tags) {
           for (var j = 0; j < tags.length; j++) {
-            let name = tags[j];
+            let name = tags[j] as string;
             if (name !== '') {
-              if (allTags == null) {
-                allTags = [name];
-              } else if (allTags.indexOf(name) < 0) {
+              console.log("FOUND TAG: " + name);
+              if (allTags.indexOf(name) < 0) {
+                // console.log("pushing to all tags");
+                // console.log(allTags);
+                // console.log(name);
                 allTags.push(name);
+                // console.log(x);
+                // console.log(allTags.length);
+                // console.log(allTags);
+                // if (allTags.length > 0) {
+                //   console.log(allTags[0]);
+                // }
               }
             }
           }
-          this.tagList = allTags;
         }
       }
+      // let test:string[] = [];
+      // console.log(test);
+      // let name = "bruhhhhh";
+      // test.push(name);
+      // console.log(test);
+      // console.log("ALL TAGS: ");
+      this.tagList = allTags;
+      // console.log(this.tagList.length);
+      // console.log(this.tagList);
     }
   }
 
   refreshTags() {
     this.pullTags();
     let layout = this.layout as PanelLayout;
+    console.log(layout.widgets);
+    console.log(this.tagList);
     let tags: string[] = this.tagList;
-    let nWidgets = layout.widgets.length-2
-    for (let i=nWidgets; i>=0; i--) {
+    console.log(tags);
+    let nWidgets = layout.widgets.length;
+    for (let i=0; i<nWidgets-1; i++) {
+      console.log((layout.widgets[i] as TagWidget).name);
       let idx = tags.indexOf((layout.widgets[i] as TagWidget).name)
-      if (idx < 0) {
-        //layout.widgets[i].dispose();
+      if (idx < 0 && layout.widgets[i].id != "add-tag") {
+        layout.widgets[i].dispose();
       } else {
+        console.log("updating tags");
         tags.splice(idx,1);
+        console.log(tags);
       }
     }
+    console.log("TAGS");
+    console.log(tags);
+    console.log(tags.length);
     for (let i=0; i<tags.length;i++){
+      console.log(tags[i])
       let widget = new TagWidget(tags[i]);
-      layout.addWidget(widget);
+      let idx = layout.widgets.length -1;
+      layout.insertWidget(idx, widget);
     }
   }
 
@@ -158,6 +189,7 @@ export class TagTool extends NotebookTools.Tool {
   protected onAfterShow() {
     this.refreshTags();
     this.loadActiveTags();
+    this.tagList;
   }
 
   /**

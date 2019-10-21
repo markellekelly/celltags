@@ -62,7 +62,6 @@ export class AddWidget extends Widget {
         this._evtKeyPress(event as KeyboardEvent);
         break;
       case 'focusout':
-        console.log("BLUR");
         this._evtBlur(event as FocusEvent);
         break;
       default:
