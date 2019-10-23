@@ -1,5 +1,6 @@
 import {
-  JupyterFrontEnd, JupyterFrontEndPlugin
+  JupyterFrontEnd, 
+  JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
 import { INotebookTools, INotebookTracker } from "@jupyterlab/notebook";
@@ -12,7 +13,6 @@ function activate(
   tools: INotebookTools,
   tracker: INotebookTracker
 ) {
-  app;
   const tool = new TagTool(tracker, app);
   tools.addItem({ tool: tool, rank: 1.7 });
  };

@@ -43,7 +43,7 @@ export class AddWidget extends Widget {
   onBeforeDetach() {
     this.node.removeEventListener('mousedown', this);
     this.node.removeEventListener('mouseover', this);
-    this.node.addEventListener('mouseout', this);
+    this.node.removeEventListener('mouseout', this);
     this.node.removeEventListener('keypress', this);
     this.node.removeEventListener('focusout', this);
   }
