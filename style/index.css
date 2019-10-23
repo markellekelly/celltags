@@ -32,6 +32,7 @@
   resize: horizontal;
   font-size: var(--jp-ui-font-size-1);
   color: var(--jp-ui-font-color2);
+  background-color: var(--jp-layout-color1);
 }
 
 .tag-holder {
@@ -56,6 +57,7 @@
   background-image: url('../static/add-24px.svg');
   background-size: 18px;
   margin-left:8px;
+  fill: var(--jp-ui-font-color2);
 }
 
 .tag-hover {

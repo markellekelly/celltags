@@ -2,7 +2,7 @@ import { PanelLayout } from "@phosphor/widgets";
 
 import { NotebookTools, INotebookTracker } from "@jupyterlab/notebook";
 
-//import { Cell } from '@jupyterlab/cells';
+import { Cell } from '@jupyterlab/cells';
 
 import { JupyterFrontEnd } from "@jupyterlab/application";
 
@@ -141,6 +141,31 @@ export class TagTool extends NotebookTools.Tool {
     }
   }
 
+  validateTags(cell: Cell) {
+    let tags = cell.model.metadata.get('tags');
+    var results: string[] = [];
+    var taglist: string[] = [];
+    if (tags === undefined) {
+      return;
+    }
+    if (typeof tags === 'string') {
+      taglist.push(tags);
+    } else {
+      taglist = <string[]>tags;
+    }
+    for (let i = 0; i < taglist.length; i++) {
+      if (taglist[i] != '' && typeof taglist[i] === 'string') {
+        let spl = taglist[i].split(' ');
+        for (let j = 0; j < spl.length; j++) {
+          if (spl[j] != '' && results.indexOf(spl[j]) < 0) {
+            results.push(spl[j]);
+          }
+        }
+      }
+    }
+    cell.model.metadata.set('tags', results);
+  }
+
   /**
    * Handle a change to the active cell.
    */
@@ -183,6 +208,7 @@ export class TagTool extends NotebookTools.Tool {
    * Handle a change to active cell metadata.
    */
   protected onActiveCellMetadataChanged(): void {
+    this.validateTags(this.tracker.activeCell);
     this.refreshTags();
     this.loadActiveTags();
   }

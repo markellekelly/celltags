@@ -17,21 +17,17 @@ export class AddWidget extends Widget {
   }
 
   buildTag() {
-    // let text = document.createElement('input');
-    // text.style.border = "none";
-    // text.defaultValue = "Add Tag";
     let text = document.createElement('input');
     text.value = "Add Tag";
     text.contentEditable = "true";
     text.className = "add-tag";
-    text.style.width = '65px';
+    text.style.width = '49px';
     let tag = document.createElement('div');
     tag.className = "tag-holder";
     tag.appendChild(text);
     let img = document.createElement('span');
     img.className = "add-icon";
     this.addClass("unapplied-tag");
-    img.style.display = "none";
     tag.appendChild(img);
     this.node.appendChild(tag);
   }
@@ -104,6 +100,7 @@ export class AddWidget extends Widget {
     if (event.keyCode == 13) {
       let value = inputElement.value;
       (this.parent as TagTool).addTag(value);
+      inputElement.blur();
       this._evtBlur();
     }
   }
@@ -113,7 +110,7 @@ export class AddWidget extends Widget {
       this.editing = false;
       let target = event.target as HTMLInputElement;
       target.value = 'Add Tag';
-      target.style.width = '65px';
+      target.style.width = '49px';
     }
   }
 

@@ -870,11 +870,11 @@
         "signature": "d2514690f5d1df159deb9af3e9703bfc4140eff7ff0cb4d715fb4cd98c9e92f8"
       },
       "/users/markelle/projects/celltags/celltags/src/tool.ts": {
-        "version": "bed82ac4f2880dd0afed315210b24777a41de325fb8071be8f677c3c977c2627",
-        "signature": "da2d8eb2cc1152fa832ede00923ecc21624d46e226945b90eb31734dda55e681"
+        "version": "903922a9ad64d79fa38efa7b70cdcf20f052d1d622ca5867af3809114d93a67c",
+        "signature": "561ea44f8ac807b9b1fb7286cc6c55ad12360673cfaa958ace528b16fa9d826d"
       },
       "/users/markelle/projects/celltags/celltags/src/addwidget.ts": {
-        "version": "58187604ab11c3584a90f3ee1d0c997c221de7d81c7f8817163b975f6417fdab",
+        "version": "31848eeaa76a55bf3c19e63999d01a647b65ce5d336cc77e5ac4c6738e4f88fa",
         "signature": "450d9b8629985367be03e8566fe1886d11a973e9d92873898d9396610b8c2054"
       },
       "/users/markelle/projects/celltags/celltags/src/index.ts": {
@@ -2644,6 +2644,7 @@
       "/users/markelle/projects/celltags/celltags/src/tool.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@phosphor/widgets/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/cells/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts",
         "/users/markelle/projects/celltags/celltags/src/widget.ts",
         "/users/markelle/projects/celltags/celltags/src/addwidget.ts",
@@ -3094,7 +3095,8 @@
       ],
       "/users/markelle/projects/celltags/celltags/src/tool.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/notebook/lib/index.d.ts",
-        "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts"
+        "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts",
+        "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/cells/lib/index.d.ts"
       ],
       "/users/markelle/projects/celltags/celltags/src/index.ts": [
         "/users/markelle/projects/celltags/celltags/node_modules/@jupyterlab/application/lib/index.d.ts"
